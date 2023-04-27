@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArbolBinario.cs" />
     <Compile Include="Cola.cs" />
     <Compile Include="frmDatosProgramador.cs">
       <SubType>Form</SubType>

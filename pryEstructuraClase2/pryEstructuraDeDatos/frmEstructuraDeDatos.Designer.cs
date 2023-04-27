@@ -38,8 +38,10 @@
             this.pilaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listasEnlazadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaSimpleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmNoLineales = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDoblementeEnlazaadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmNoLineales = new System.Windows.Forms.ToolStripMenuItem();
+            this.arbolBinarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grafoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,14 +104,14 @@
             // colaToolStripMenuItem
             // 
             this.colaToolStripMenuItem.Name = "colaToolStripMenuItem";
-            this.colaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.colaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.colaToolStripMenuItem.Text = "Cola";
             this.colaToolStripMenuItem.Click += new System.EventHandler(this.colaToolStripMenuItem_Click);
             // 
             // pilaToolStripMenuItem
             // 
             this.pilaToolStripMenuItem.Name = "pilaToolStripMenuItem";
-            this.pilaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pilaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.pilaToolStripMenuItem.Text = "Pila";
             this.pilaToolStripMenuItem.Click += new System.EventHandler(this.pilaToolStripMenuItem_Click);
             // 
@@ -119,7 +121,7 @@
             this.listaSimpleToolStripMenuItem,
             this.listaDoblementeEnlazaadaToolStripMenuItem});
             this.listasEnlazadasToolStripMenuItem.Name = "listasEnlazadasToolStripMenuItem";
-            this.listasEnlazadasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listasEnlazadasToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.listasEnlazadasToolStripMenuItem.Text = "Listas Enlazadas";
             // 
             // listaSimpleToolStripMenuItem
@@ -129,19 +131,34 @@
             this.listaSimpleToolStripMenuItem.Text = "Lista Simple";
             this.listaSimpleToolStripMenuItem.Click += new System.EventHandler(this.listaSimpleToolStripMenuItem_Click);
             // 
-            // tsmNoLineales
-            // 
-            this.tsmNoLineales.ForeColor = System.Drawing.Color.White;
-            this.tsmNoLineales.Name = "tsmNoLineales";
-            this.tsmNoLineales.Size = new System.Drawing.Size(80, 20);
-            this.tsmNoLineales.Text = "No Lineales";
-            // 
             // listaDoblementeEnlazaadaToolStripMenuItem
             // 
             this.listaDoblementeEnlazaadaToolStripMenuItem.Name = "listaDoblementeEnlazaadaToolStripMenuItem";
             this.listaDoblementeEnlazaadaToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.listaDoblementeEnlazaadaToolStripMenuItem.Text = "Lista Doblemente Enlazaada";
             this.listaDoblementeEnlazaadaToolStripMenuItem.Click += new System.EventHandler(this.listaDoblementeEnlazaadaToolStripMenuItem_Click);
+            // 
+            // tsmNoLineales
+            // 
+            this.tsmNoLineales.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.arbolBinarioToolStripMenuItem,
+            this.grafoToolStripMenuItem});
+            this.tsmNoLineales.ForeColor = System.Drawing.Color.White;
+            this.tsmNoLineales.Name = "tsmNoLineales";
+            this.tsmNoLineales.Size = new System.Drawing.Size(80, 20);
+            this.tsmNoLineales.Text = "No Lineales";
+            // 
+            // arbolBinarioToolStripMenuItem
+            // 
+            this.arbolBinarioToolStripMenuItem.Name = "arbolBinarioToolStripMenuItem";
+            this.arbolBinarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.arbolBinarioToolStripMenuItem.Text = "Arbol Binario";
+            // 
+            // grafoToolStripMenuItem
+            // 
+            this.grafoToolStripMenuItem.Name = "grafoToolStripMenuItem";
+            this.grafoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.grafoToolStripMenuItem.Text = "Grafo";
             // 
             // frmEstructuraDeDatos
             // 
@@ -155,6 +172,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmEstructuraDeDatos";
+            this.Text = "Estructura de Datos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -177,6 +195,8 @@
         private System.Windows.Forms.ToolStripMenuItem listasEnlazadasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaSimpleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaDoblementeEnlazaadaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem arbolBinarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem grafoToolStripMenuItem;
     }
 }
 
