@@ -51,5 +51,11 @@ namespace pryEstructuraDeDatos
             frmListaDoblementeEnlazada newObj = new frmListaDoblementeEnlazada();
             newObj.ShowDialog();
         }
+
+        private void arbolBinarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmArbolBinario newobj = new frmArbolBinario();
+            newobj.ShowDialog();
+        }
     }
 }

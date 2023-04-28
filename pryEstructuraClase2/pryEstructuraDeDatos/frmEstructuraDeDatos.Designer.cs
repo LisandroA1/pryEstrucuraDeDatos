@@ -153,6 +153,7 @@
             this.arbolBinarioToolStripMenuItem.Name = "arbolBinarioToolStripMenuItem";
             this.arbolBinarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.arbolBinarioToolStripMenuItem.Text = "Arbol Binario";
+            this.arbolBinarioToolStripMenuItem.Click += new System.EventHandler(this.arbolBinarioToolStripMenuItem_Click);
             // 
             // grafoToolStripMenuItem
             // 
