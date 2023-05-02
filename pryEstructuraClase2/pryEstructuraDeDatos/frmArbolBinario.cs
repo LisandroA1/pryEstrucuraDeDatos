@@ -17,7 +17,7 @@ namespace pryEstructuraDeDatos
             InitializeComponent();
         }
         ArbolBinario ListaDePersonas = new ArbolBinario();
-        Int32 Codigo;
+        
 
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
@@ -28,14 +28,17 @@ namespace pryEstructuraDeDatos
 
             ListaDePersonas.Agregar(objNodo);
 
-            //ListaDePersonas.Recorrer(dgvGrilla);
+            ListaDePersonas.Recorrer(dgvGrilla);
             ListaDePersonas.Recorrer(lstLista);
-            //ListaDePersonas.Recorrer(lstCodigo);
+            ListaDePersonas.Recorrer(lstCodigo);
+            
 
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtTramite.Text = "";
 
         }
+
+        
     }
 }

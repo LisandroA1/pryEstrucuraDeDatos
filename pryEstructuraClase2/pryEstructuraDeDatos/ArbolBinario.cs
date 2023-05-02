@@ -56,6 +56,7 @@ namespace pryEstructuraDeDatos
             }
         }
 
+        //recorro por lista
         public void Recorrer(ListBox Lista)
         {
             Lista.Items.Clear();
@@ -68,14 +69,48 @@ namespace pryEstructuraDeDatos
             if (R.Izquierdo != null) InOrdenAsc(lst, R.Izquierdo);
             lst.Items.Add(R.Codigo);
             if (R.Derecho != null) InOrdenAsc(lst, R.Derecho);
-            
-
-            
-        
 
         }
+        //Recorro por combo
+        
+        
+        
+        
+        public void InOrdenAsc(ComboBox Combo, Nodo R)
+        {
+            if (R.Izquierdo != null) InOrdenAsc(Combo, R.Izquierdo);
+            Combo.Items.Add(R.Codigo);
+            if (R.Derecho != null) InOrdenAsc(Combo, R.Derecho);
+        }
+
+        public void Recorrer(ComboBox Combo)
+        {
+            Nodo aux = Inicio;
+            Combo.Items.Clear();
+            while (aux != null)
+            {
+                Combo.Items.Add(aux.Codigo);
+                aux = aux.Siguiente;
+            }
+        }
+        //Recorro por grilla
+       
+
+        public void InOrdenAsc(DataGridView dgvArbolBinario, Nodo R)
+        {
+            if (R.Izquierdo != null) InOrdenAsc(dgvArbolBinario, R.Izquierdo);
+            dgvArbolBinario.Rows.Add(R.Codigo);
+            if (R.Derecho != null) InOrdenAsc(dgvArbolBinario, R.Derecho);
+
+        }
+
+        public void Recorrer(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            InOrdenAsc(Grilla, Raiz);
+        }
     }
-}    
+}   
         
        
        
