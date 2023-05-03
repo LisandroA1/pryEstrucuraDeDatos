@@ -28,6 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.optDescendente = new System.Windows.Forms.RadioButton();
+            this.optAscendente = new System.Windows.Forms.RadioButton();
+            this.mrcListado = new System.Windows.Forms.GroupBox();
+            this.dgvGrilla = new System.Windows.Forms.DataGridView();
+            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Trámite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mrcElementoEliminado = new System.Windows.Forms.GroupBox();
             this.lstCodigo = new System.Windows.Forms.ComboBox();
             this.cmdEliminar = new System.Windows.Forms.Button();
@@ -41,18 +49,90 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.img = new System.Windows.Forms.PictureBox();
-            this.lstLista = new System.Windows.Forms.ListBox();
-            this.dgvGrilla = new System.Windows.Forms.DataGridView();
-            this.Trámite = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mrcListado = new System.Windows.Forms.GroupBox();
+            this.lstB = new System.Windows.Forms.ListBox();
+            this.groupBox1.SuspendLayout();
+            this.mrcListado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.mrcElementoEliminado.SuspendLayout();
             this.mrcNuevoElemento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
-            this.mrcListado.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.optDescendente);
+            this.groupBox1.Controls.Add(this.optAscendente);
+            this.groupBox1.Location = new System.Drawing.Point(473, 143);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(215, 97);
+            this.groupBox1.TabIndex = 21;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Listar Datos";
+            // 
+            // optDescendente
+            // 
+            this.optDescendente.AutoSize = true;
+            this.optDescendente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optDescendente.Location = new System.Drawing.Point(9, 56);
+            this.optDescendente.Name = "optDescendente";
+            this.optDescendente.Size = new System.Drawing.Size(110, 21);
+            this.optDescendente.TabIndex = 1;
+            this.optDescendente.TabStop = true;
+            this.optDescendente.Text = "Descendente";
+            this.optDescendente.UseVisualStyleBackColor = true;
+            // 
+            // optAscendente
+            // 
+            this.optAscendente.AutoSize = true;
+            this.optAscendente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optAscendente.Location = new System.Drawing.Point(9, 19);
+            this.optAscendente.Name = "optAscendente";
+            this.optAscendente.Size = new System.Drawing.Size(101, 21);
+            this.optAscendente.TabIndex = 0;
+            this.optAscendente.TabStop = true;
+            this.optAscendente.Text = "Ascendente";
+            this.optAscendente.UseVisualStyleBackColor = true;
+            // 
+            // mrcListado
+            // 
+            this.mrcListado.Controls.Add(this.lstB);
+            this.mrcListado.Controls.Add(this.dgvGrilla);
+            this.mrcListado.Location = new System.Drawing.Point(12, 263);
+            this.mrcListado.Name = "mrcListado";
+            this.mrcListado.Size = new System.Drawing.Size(676, 240);
+            this.mrcListado.TabIndex = 20;
+            this.mrcListado.TabStop = false;
+            this.mrcListado.Text = "Listado en una Lista y una Grilla";
+            // 
+            // dgvGrilla
+            // 
+            this.dgvGrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGrilla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Código,
+            this.Nombre,
+            this.Trámite});
+            this.dgvGrilla.Location = new System.Drawing.Point(230, 19);
+            this.dgvGrilla.Name = "dgvGrilla";
+            this.dgvGrilla.Size = new System.Drawing.Size(440, 215);
+            this.dgvGrilla.TabIndex = 1;
+            // 
+            // Código
+            // 
+            this.Código.HeaderText = "Código";
+            this.Código.Name = "Código";
+            this.Código.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Trámite
+            // 
+            this.Trámite.HeaderText = "Trámite";
+            this.Trámite.Name = "Trámite";
+            this.Trámite.ReadOnly = true;
             // 
             // mrcElementoEliminado
             // 
@@ -61,7 +141,7 @@
             this.mrcElementoEliminado.Controls.Add(this.label4);
             this.mrcElementoEliminado.Location = new System.Drawing.Point(473, 12);
             this.mrcElementoEliminado.Name = "mrcElementoEliminado";
-            this.mrcElementoEliminado.Size = new System.Drawing.Size(215, 228);
+            this.mrcElementoEliminado.Size = new System.Drawing.Size(215, 125);
             this.mrcElementoEliminado.TabIndex = 18;
             this.mrcElementoEliminado.TabStop = false;
             this.mrcElementoEliminado.Text = "Elemento Eliminado";
@@ -79,7 +159,7 @@
             // cmdEliminar
             // 
             this.cmdEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdEliminar.Location = new System.Drawing.Point(9, 176);
+            this.cmdEliminar.Location = new System.Drawing.Point(9, 70);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(200, 37);
             this.cmdEliminar.TabIndex = 8;
@@ -179,7 +259,7 @@
             // 
             // img
             // 
-            this.img.Image = global::pryEstructuraDeDatos.Properties.Resources.listaDoble1;
+            this.img.Image = global::pryEstructuraDeDatos.Properties.Resources.Arbol_binario;
             this.img.Location = new System.Drawing.Point(12, 12);
             this.img.Name = "img";
             this.img.Size = new System.Drawing.Size(215, 228);
@@ -187,78 +267,50 @@
             this.img.TabIndex = 19;
             this.img.TabStop = false;
             // 
-            // lstLista
+            // lstB
             // 
-            this.lstLista.FormattingEnabled = true;
-            this.lstLista.Location = new System.Drawing.Point(6, 19);
-            this.lstLista.Name = "lstLista";
-            this.lstLista.Size = new System.Drawing.Size(209, 212);
-            this.lstLista.TabIndex = 0;
-            // 
-            // dgvGrilla
-            // 
-            this.dgvGrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGrilla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Código,
-            this.Nombre,
-            this.Trámite});
-            this.dgvGrilla.Location = new System.Drawing.Point(230, 19);
-            this.dgvGrilla.Name = "dgvGrilla";
-            this.dgvGrilla.Size = new System.Drawing.Size(440, 215);
-            this.dgvGrilla.TabIndex = 1;
-            // 
-            // Trámite
-            // 
-            this.Trámite.HeaderText = "Trámite";
-            this.Trámite.Name = "Trámite";
-            this.Trámite.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Código
-            // 
-            this.Código.HeaderText = "Código";
-            this.Código.Name = "Código";
-            this.Código.ReadOnly = true;
-            // 
-            // mrcListado
-            // 
-            this.mrcListado.Controls.Add(this.dgvGrilla);
-            this.mrcListado.Controls.Add(this.lstLista);
-            this.mrcListado.Location = new System.Drawing.Point(12, 263);
-            this.mrcListado.Name = "mrcListado";
-            this.mrcListado.Size = new System.Drawing.Size(676, 240);
-            this.mrcListado.TabIndex = 20;
-            this.mrcListado.TabStop = false;
-            this.mrcListado.Text = "Listado en una Lista y una Grilla";
+            this.lstB.FormattingEnabled = true;
+            this.lstB.Location = new System.Drawing.Point(6, 19);
+            this.lstB.Name = "lstB";
+            this.lstB.Size = new System.Drawing.Size(209, 212);
+            this.lstB.TabIndex = 2;
             // 
             // frmArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(694, 509);
+            this.ClientSize = new System.Drawing.Size(699, 510);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.mrcListado);
             this.Controls.Add(this.img);
             this.Controls.Add(this.mrcElementoEliminado);
             this.Controls.Add(this.mrcNuevoElemento);
             this.Name = "frmArbolBinario";
-            this.Text = "frmArbolBinario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Arbol Binario";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.mrcListado.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
             this.mrcElementoEliminado.ResumeLayout(false);
             this.mrcElementoEliminado.PerformLayout();
             this.mrcNuevoElemento.ResumeLayout(false);
             this.mrcNuevoElemento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
-            this.mrcListado.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton optDescendente;
+        private System.Windows.Forms.RadioButton optAscendente;
+        private System.Windows.Forms.GroupBox mrcListado;
+        private System.Windows.Forms.DataGridView dgvGrilla;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Código;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Trámite;
         private System.Windows.Forms.PictureBox img;
         private System.Windows.Forms.GroupBox mrcElementoEliminado;
         private System.Windows.Forms.ComboBox lstCodigo;
@@ -272,11 +324,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox lstLista;
-        private System.Windows.Forms.DataGridView dgvGrilla;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Código;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Trámite;
-        private System.Windows.Forms.GroupBox mrcListado;
+        private System.Windows.Forms.ListBox lstB;
     }
 }

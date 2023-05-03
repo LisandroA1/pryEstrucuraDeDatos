@@ -16,9 +16,7 @@ namespace pryEstructuraDeDatos
         {
             InitializeComponent();
         }
-        ArbolBinario ListaDePersonas = new ArbolBinario();
-        
-
+        ArbolBinario ArbolBinario = new ArbolBinario();
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
             Nodo objNodo = new Nodo();
@@ -26,19 +24,18 @@ namespace pryEstructuraDeDatos
             objNodo.Nombre = txtNombre.Text;
             objNodo.Tramite = txtTramite.Text;
 
-            ListaDePersonas.Agregar(objNodo);
+            ArbolBinario.Agregar(objNodo);
 
-            ListaDePersonas.Recorrer(dgvGrilla);
-            ListaDePersonas.Recorrer(lstLista);
-            ListaDePersonas.Recorrer(lstCodigo);
-            
+            ArbolBinario.Recorrer(dgvGrilla);
+            ArbolBinario.Recorrer(lstCodigo);
+            ArbolBinario.Recorrer(lstB);
 
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtTramite.Text = "";
 
-        }
 
-        
+
+        }
     }
 }
