@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstructuraDeDatos));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsmSistema = new System.Windows.Forms.ToolStripMenuItem();
             this.datosProgramadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -151,14 +152,14 @@
             // arbolBinarioToolStripMenuItem
             // 
             this.arbolBinarioToolStripMenuItem.Name = "arbolBinarioToolStripMenuItem";
-            this.arbolBinarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.arbolBinarioToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.arbolBinarioToolStripMenuItem.Text = "Arbol Binario";
             this.arbolBinarioToolStripMenuItem.Click += new System.EventHandler(this.arbolBinarioToolStripMenuItem_Click);
             // 
             // grafoToolStripMenuItem
             // 
             this.grafoToolStripMenuItem.Name = "grafoToolStripMenuItem";
-            this.grafoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.grafoToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.grafoToolStripMenuItem.Text = "Grafo";
             // 
             // frmEstructuraDeDatos
@@ -171,6 +172,7 @@
             this.ClientSize = new System.Drawing.Size(739, 461);
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmEstructuraDeDatos";
             this.Text = "Estructura de Datos";

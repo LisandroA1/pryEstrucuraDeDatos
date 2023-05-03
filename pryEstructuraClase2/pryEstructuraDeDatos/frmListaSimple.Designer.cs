@@ -29,6 +29,7 @@ namespace pryEstructuraDeDatos
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaSimple));
             this.mrcListado = new System.Windows.Forms.GroupBox();
             this.dgvGrilla = new System.Windows.Forms.DataGridView();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -230,7 +231,7 @@ namespace pryEstructuraDeDatos
             // 
             // pcbImagen
             // 
-            this.pcbImagen.Image = global::pryEstructuraDeDatos.Properties.Resources.apilar_desapilar;
+            this.pcbImagen.Image = global::pryEstructuraDeDatos.Properties.Resources.Lista_enlazada;
             this.pcbImagen.Location = new System.Drawing.Point(12, 12);
             this.pcbImagen.Name = "pcbImagen";
             this.pcbImagen.Size = new System.Drawing.Size(215, 228);
@@ -247,9 +248,10 @@ namespace pryEstructuraDeDatos
             this.Controls.Add(this.pcbImagen);
             this.Controls.Add(this.mrcElementoEliminado);
             this.Controls.Add(this.mrcNuevoElemento);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListaSimple";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmListaSimple";
+            this.Text = "Lista Simple";
             this.mrcListado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
             this.mrcElementoEliminado.ResumeLayout(false);

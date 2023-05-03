@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmArbolBinario));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.optDescendente = new System.Windows.Forms.RadioButton();
             this.optAscendente = new System.Windows.Forms.RadioButton();
             this.mrcListado = new System.Windows.Forms.GroupBox();
+            this.lstB = new System.Windows.Forms.ListBox();
             this.dgvGrilla = new System.Windows.Forms.DataGridView();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,11 +51,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.img = new System.Windows.Forms.PictureBox();
-            this.lstB = new System.Windows.Forms.ListBox();
             this.mrcTipoDeOrden = new System.Windows.Forms.GroupBox();
-            this.optInOrden = new System.Windows.Forms.RadioButton();
-            this.optPreOrden = new System.Windows.Forms.RadioButton();
             this.optPostOrden = new System.Windows.Forms.RadioButton();
+            this.optPreOrden = new System.Windows.Forms.RadioButton();
+            this.optInOrden = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.mrcListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
@@ -108,6 +109,14 @@
             this.mrcListado.TabIndex = 20;
             this.mrcListado.TabStop = false;
             this.mrcListado.Text = "Listado en una Lista y una Grilla";
+            // 
+            // lstB
+            // 
+            this.lstB.FormattingEnabled = true;
+            this.lstB.Location = new System.Drawing.Point(6, 19);
+            this.lstB.Name = "lstB";
+            this.lstB.Size = new System.Drawing.Size(209, 212);
+            this.lstB.TabIndex = 2;
             // 
             // dgvGrilla
             // 
@@ -272,14 +281,6 @@
             this.img.TabIndex = 19;
             this.img.TabStop = false;
             // 
-            // lstB
-            // 
-            this.lstB.FormattingEnabled = true;
-            this.lstB.Location = new System.Drawing.Point(6, 19);
-            this.lstB.Name = "lstB";
-            this.lstB.Size = new System.Drawing.Size(209, 212);
-            this.lstB.TabIndex = 2;
-            // 
             // mrcTipoDeOrden
             // 
             this.mrcTipoDeOrden.Controls.Add(this.optPostOrden);
@@ -291,32 +292,6 @@
             this.mrcTipoDeOrden.TabIndex = 22;
             this.mrcTipoDeOrden.TabStop = false;
             this.mrcTipoDeOrden.Text = "Tipo de Orden";
-            // 
-            // optInOrden
-            // 
-            this.optInOrden.AutoSize = true;
-            this.optInOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optInOrden.Location = new System.Drawing.Point(17, 42);
-            this.optInOrden.Name = "optInOrden";
-            this.optInOrden.Size = new System.Drawing.Size(77, 21);
-            this.optInOrden.TabIndex = 1;
-            this.optInOrden.TabStop = true;
-            this.optInOrden.Text = "InOrden";
-            this.optInOrden.UseVisualStyleBackColor = true;
-            this.optInOrden.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // optPreOrden
-            // 
-            this.optPreOrden.AutoSize = true;
-            this.optPreOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optPreOrden.Location = new System.Drawing.Point(170, 42);
-            this.optPreOrden.Name = "optPreOrden";
-            this.optPreOrden.Size = new System.Drawing.Size(88, 21);
-            this.optPreOrden.TabIndex = 2;
-            this.optPreOrden.TabStop = true;
-            this.optPreOrden.Text = "PreOrden";
-            this.optPreOrden.UseVisualStyleBackColor = true;
-            this.optPreOrden.CheckedChanged += new System.EventHandler(this.optPreOrden_CheckedChanged);
             // 
             // optPostOrden
             // 
@@ -331,6 +306,32 @@
             this.optPostOrden.UseVisualStyleBackColor = true;
             this.optPostOrden.CheckedChanged += new System.EventHandler(this.optPostOrden_CheckedChanged);
             // 
+            // optPreOrden
+            // 
+            this.optPreOrden.AutoSize = true;
+            this.optPreOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optPreOrden.Location = new System.Drawing.Point(170, 42);
+            this.optPreOrden.Name = "optPreOrden";
+            this.optPreOrden.Size = new System.Drawing.Size(88, 21);
+            this.optPreOrden.TabIndex = 2;
+            this.optPreOrden.TabStop = true;
+            this.optPreOrden.Text = "PreOrden";
+            this.optPreOrden.UseVisualStyleBackColor = true;
+            this.optPreOrden.CheckedChanged += new System.EventHandler(this.optPreOrden_CheckedChanged);
+            // 
+            // optInOrden
+            // 
+            this.optInOrden.AutoSize = true;
+            this.optInOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optInOrden.Location = new System.Drawing.Point(17, 42);
+            this.optInOrden.Name = "optInOrden";
+            this.optInOrden.Size = new System.Drawing.Size(77, 21);
+            this.optInOrden.TabIndex = 1;
+            this.optInOrden.TabStop = true;
+            this.optInOrden.Text = "InOrden";
+            this.optInOrden.UseVisualStyleBackColor = true;
+            this.optInOrden.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
             // frmArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,6 +343,7 @@
             this.Controls.Add(this.img);
             this.Controls.Add(this.mrcElementoEliminado);
             this.Controls.Add(this.mrcNuevoElemento);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmArbolBinario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Arbol Binario";

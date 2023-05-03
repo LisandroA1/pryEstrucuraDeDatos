@@ -29,6 +29,7 @@ namespace pryEstructuraDeDatos
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaDoblementeEnlazada));
             this.mrcListado = new System.Windows.Forms.GroupBox();
             this.dgvGrilla = new System.Windows.Forms.DataGridView();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,16 +48,16 @@ namespace pryEstructuraDeDatos
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.img = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.optDescendente = new System.Windows.Forms.RadioButton();
             this.optAscendente = new System.Windows.Forms.RadioButton();
+            this.img = new System.Windows.Forms.PictureBox();
             this.mrcListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.mrcElementoEliminado.SuspendLayout();
             this.mrcNuevoElemento.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.img)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.img)).BeginInit();
             this.SuspendLayout();
             // 
             // mrcListado
@@ -232,16 +233,6 @@ namespace pryEstructuraDeDatos
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo:";
             // 
-            // img
-            // 
-            this.img.Image = global::pryEstructuraDeDatos.Properties.Resources.listaDoble1;
-            this.img.Location = new System.Drawing.Point(12, 12);
-            this.img.Name = "img";
-            this.img.Size = new System.Drawing.Size(215, 228);
-            this.img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.img.TabIndex = 14;
-            this.img.TabStop = false;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.optDescendente);
@@ -279,6 +270,16 @@ namespace pryEstructuraDeDatos
             this.optAscendente.UseVisualStyleBackColor = true;
             this.optAscendente.CheckedChanged += new System.EventHandler(this.optAscendente_CheckedChanged);
             // 
+            // img
+            // 
+            this.img.Image = global::pryEstructuraDeDatos.Properties.Resources.Lista_doblemente_enlazada;
+            this.img.Location = new System.Drawing.Point(12, 12);
+            this.img.Name = "img";
+            this.img.Size = new System.Drawing.Size(215, 228);
+            this.img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.img.TabIndex = 14;
+            this.img.TabStop = false;
+            // 
             // frmListaDoblementeEnlazada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,6 +290,7 @@ namespace pryEstructuraDeDatos
             this.Controls.Add(this.img);
             this.Controls.Add(this.mrcElementoEliminado);
             this.Controls.Add(this.mrcNuevoElemento);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListaDoblementeEnlazada";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista Doblemente Enlazada";
@@ -298,9 +300,9 @@ namespace pryEstructuraDeDatos
             this.mrcElementoEliminado.PerformLayout();
             this.mrcNuevoElemento.ResumeLayout(false);
             this.mrcNuevoElemento.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.img)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.img)).EndInit();
             this.ResumeLayout(false);
 
         }

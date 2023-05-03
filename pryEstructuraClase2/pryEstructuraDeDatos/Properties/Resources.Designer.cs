@@ -133,9 +133,39 @@ namespace pryEstructuraDeDatos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Lista_doblemente_enlazada {
+            get {
+                object obj = ResourceManager.GetObject("Lista doblemente enlazada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lista_enlazada {
+            get {
+                object obj = ResourceManager.GetObject("Lista enlazada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap listaDoble1 {
             get {
                 object obj = ResourceManager.GetObject("listaDoble1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pila {
+            get {
+                object obj = ResourceManager.GetObject("pila", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
