@@ -37,5 +37,38 @@ namespace pryEstructuraDeDatos
 
 
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (optAscendente.Checked)
+            {
+                ArbolBinario.Recorrer(lstB);
+                ArbolBinario.Recorrer(dgvGrilla);
+                ArbolBinario.Recorrer(lstCodigo);
+                
+
+            }
+            else
+            {
+                ArbolBinario.RecorrerDes(lstB);
+                ArbolBinario.RecorrerDes(dgvGrilla);
+                ArbolBinario.RecorrerDes(lstCodigo);
+            }
+        }
+
+        private void optPreOrden_CheckedChanged(object sender, EventArgs e)
+        {
+            ArbolBinario.RecorrerPreOrden(lstCodigo);
+            ArbolBinario.RecorrerPreOrden(lstB);
+            ArbolBinario.RecorrerPreOrden(dgvGrilla);
+            
+        }
+
+        private void optPostOrden_CheckedChanged(object sender, EventArgs e)
+        {
+            ArbolBinario.RecorrerPostOrden(lstCodigo);
+            ArbolBinario.RecorrerPostOrden(lstB);
+            ArbolBinario.RecorrerPostOrden(dgvGrilla);
+        }
     }
 }

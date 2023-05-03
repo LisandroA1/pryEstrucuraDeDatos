@@ -50,21 +50,26 @@
             this.label1 = new System.Windows.Forms.Label();
             this.img = new System.Windows.Forms.PictureBox();
             this.lstB = new System.Windows.Forms.ListBox();
+            this.mrcTipoDeOrden = new System.Windows.Forms.GroupBox();
+            this.optInOrden = new System.Windows.Forms.RadioButton();
+            this.optPreOrden = new System.Windows.Forms.RadioButton();
+            this.optPostOrden = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.mrcListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.mrcElementoEliminado.SuspendLayout();
             this.mrcNuevoElemento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img)).BeginInit();
+            this.mrcTipoDeOrden.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.optDescendente);
             this.groupBox1.Controls.Add(this.optAscendente);
-            this.groupBox1.Location = new System.Drawing.Point(473, 143);
+            this.groupBox1.Location = new System.Drawing.Point(12, 247);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(215, 97);
+            this.groupBox1.Size = new System.Drawing.Size(209, 97);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listar Datos";
@@ -97,7 +102,7 @@
             // 
             this.mrcListado.Controls.Add(this.lstB);
             this.mrcListado.Controls.Add(this.dgvGrilla);
-            this.mrcListado.Location = new System.Drawing.Point(12, 263);
+            this.mrcListado.Location = new System.Drawing.Point(12, 350);
             this.mrcListado.Name = "mrcListado";
             this.mrcListado.Size = new System.Drawing.Size(676, 240);
             this.mrcListado.TabIndex = 20;
@@ -111,7 +116,7 @@
             this.Código,
             this.Nombre,
             this.Trámite});
-            this.dgvGrilla.Location = new System.Drawing.Point(230, 19);
+            this.dgvGrilla.Location = new System.Drawing.Point(230, 16);
             this.dgvGrilla.Name = "dgvGrilla";
             this.dgvGrilla.Size = new System.Drawing.Size(440, 215);
             this.dgvGrilla.TabIndex = 1;
@@ -141,7 +146,7 @@
             this.mrcElementoEliminado.Controls.Add(this.label4);
             this.mrcElementoEliminado.Location = new System.Drawing.Point(473, 12);
             this.mrcElementoEliminado.Name = "mrcElementoEliminado";
-            this.mrcElementoEliminado.Size = new System.Drawing.Size(215, 125);
+            this.mrcElementoEliminado.Size = new System.Drawing.Size(215, 228);
             this.mrcElementoEliminado.TabIndex = 18;
             this.mrcElementoEliminado.TabStop = false;
             this.mrcElementoEliminado.Text = "Elemento Eliminado";
@@ -151,7 +156,7 @@
             this.lstCodigo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lstCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstCodigo.FormattingEnabled = true;
-            this.lstCodigo.Location = new System.Drawing.Point(68, 22);
+            this.lstCodigo.Location = new System.Drawing.Point(68, 76);
             this.lstCodigo.Name = "lstCodigo";
             this.lstCodigo.Size = new System.Drawing.Size(141, 24);
             this.lstCodigo.TabIndex = 9;
@@ -159,7 +164,7 @@
             // cmdEliminar
             // 
             this.cmdEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdEliminar.Location = new System.Drawing.Point(9, 70);
+            this.cmdEliminar.Location = new System.Drawing.Point(6, 176);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(200, 37);
             this.cmdEliminar.TabIndex = 8;
@@ -170,7 +175,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 29);
+            this.label4.Location = new System.Drawing.Point(6, 83);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 17);
             this.label4.TabIndex = 1;
@@ -275,11 +280,63 @@
             this.lstB.Size = new System.Drawing.Size(209, 212);
             this.lstB.TabIndex = 2;
             // 
+            // mrcTipoDeOrden
+            // 
+            this.mrcTipoDeOrden.Controls.Add(this.optPostOrden);
+            this.mrcTipoDeOrden.Controls.Add(this.optPreOrden);
+            this.mrcTipoDeOrden.Controls.Add(this.optInOrden);
+            this.mrcTipoDeOrden.Location = new System.Drawing.Point(242, 247);
+            this.mrcTipoDeOrden.Name = "mrcTipoDeOrden";
+            this.mrcTipoDeOrden.Size = new System.Drawing.Size(440, 98);
+            this.mrcTipoDeOrden.TabIndex = 22;
+            this.mrcTipoDeOrden.TabStop = false;
+            this.mrcTipoDeOrden.Text = "Tipo de Orden";
+            // 
+            // optInOrden
+            // 
+            this.optInOrden.AutoSize = true;
+            this.optInOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optInOrden.Location = new System.Drawing.Point(17, 42);
+            this.optInOrden.Name = "optInOrden";
+            this.optInOrden.Size = new System.Drawing.Size(77, 21);
+            this.optInOrden.TabIndex = 1;
+            this.optInOrden.TabStop = true;
+            this.optInOrden.Text = "InOrden";
+            this.optInOrden.UseVisualStyleBackColor = true;
+            this.optInOrden.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // optPreOrden
+            // 
+            this.optPreOrden.AutoSize = true;
+            this.optPreOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optPreOrden.Location = new System.Drawing.Point(170, 42);
+            this.optPreOrden.Name = "optPreOrden";
+            this.optPreOrden.Size = new System.Drawing.Size(88, 21);
+            this.optPreOrden.TabIndex = 2;
+            this.optPreOrden.TabStop = true;
+            this.optPreOrden.Text = "PreOrden";
+            this.optPreOrden.UseVisualStyleBackColor = true;
+            this.optPreOrden.CheckedChanged += new System.EventHandler(this.optPreOrden_CheckedChanged);
+            // 
+            // optPostOrden
+            // 
+            this.optPostOrden.AutoSize = true;
+            this.optPostOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optPostOrden.Location = new System.Drawing.Point(320, 42);
+            this.optPostOrden.Name = "optPostOrden";
+            this.optPostOrden.Size = new System.Drawing.Size(94, 21);
+            this.optPostOrden.TabIndex = 3;
+            this.optPostOrden.TabStop = true;
+            this.optPostOrden.Text = "PostOrden";
+            this.optPostOrden.UseVisualStyleBackColor = true;
+            this.optPostOrden.CheckedChanged += new System.EventHandler(this.optPostOrden_CheckedChanged);
+            // 
             // frmArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 510);
+            this.ClientSize = new System.Drawing.Size(699, 642);
+            this.Controls.Add(this.mrcTipoDeOrden);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.mrcListado);
             this.Controls.Add(this.img);
@@ -297,6 +354,8 @@
             this.mrcNuevoElemento.ResumeLayout(false);
             this.mrcNuevoElemento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img)).EndInit();
+            this.mrcTipoDeOrden.ResumeLayout(false);
+            this.mrcTipoDeOrden.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -325,5 +384,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lstB;
+        private System.Windows.Forms.GroupBox mrcTipoDeOrden;
+        private System.Windows.Forms.RadioButton optPostOrden;
+        private System.Windows.Forms.RadioButton optPreOrden;
+        private System.Windows.Forms.RadioButton optInOrden;
     }
 }
