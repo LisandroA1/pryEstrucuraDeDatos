@@ -55,6 +55,7 @@
             this.optPostOrden = new System.Windows.Forms.RadioButton();
             this.optPreOrden = new System.Windows.Forms.RadioButton();
             this.optInOrden = new System.Windows.Forms.RadioButton();
+            this.tvArbolBinario = new System.Windows.Forms.TreeView();
             this.groupBox1.SuspendLayout();
             this.mrcListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
@@ -101,6 +102,7 @@
             // 
             // mrcListado
             // 
+            this.mrcListado.Controls.Add(this.tvArbolBinario);
             this.mrcListado.Controls.Add(this.lstB);
             this.mrcListado.Controls.Add(this.dgvGrilla);
             this.mrcListado.Location = new System.Drawing.Point(12, 350);
@@ -115,7 +117,7 @@
             this.lstB.FormattingEnabled = true;
             this.lstB.Location = new System.Drawing.Point(6, 19);
             this.lstB.Name = "lstB";
-            this.lstB.Size = new System.Drawing.Size(209, 212);
+            this.lstB.Size = new System.Drawing.Size(158, 212);
             this.lstB.TabIndex = 2;
             // 
             // dgvGrilla
@@ -125,9 +127,9 @@
             this.Código,
             this.Nombre,
             this.Trámite});
-            this.dgvGrilla.Location = new System.Drawing.Point(230, 16);
+            this.dgvGrilla.Location = new System.Drawing.Point(178, 16);
             this.dgvGrilla.Name = "dgvGrilla";
-            this.dgvGrilla.Size = new System.Drawing.Size(440, 215);
+            this.dgvGrilla.Size = new System.Drawing.Size(345, 215);
             this.dgvGrilla.TabIndex = 1;
             // 
             // Código
@@ -332,6 +334,13 @@
             this.optInOrden.UseVisualStyleBackColor = true;
             this.optInOrden.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
+            // tvArbolBinario
+            // 
+            this.tvArbolBinario.Location = new System.Drawing.Point(529, 16);
+            this.tvArbolBinario.Name = "tvArbolBinario";
+            this.tvArbolBinario.Size = new System.Drawing.Size(138, 215);
+            this.tvArbolBinario.TabIndex = 3;
+            // 
             // frmArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,5 +399,6 @@
         private System.Windows.Forms.RadioButton optPostOrden;
         private System.Windows.Forms.RadioButton optPreOrden;
         private System.Windows.Forms.RadioButton optInOrden;
+        private System.Windows.Forms.TreeView tvArbolBinario;
     }
 }

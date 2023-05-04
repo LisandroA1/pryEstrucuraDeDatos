@@ -33,12 +33,14 @@ namespace pryEstructuraDeDatos
                     ArbolBinario.Recorrer(dgvGrilla);
                     ArbolBinario.Recorrer(lstCodigo);
                     ArbolBinario.Recorrer(lstB);
+                    ArbolBinario.Recorrer(tvArbolBinario);
                 }
                 else
                 {
                     ArbolBinario.RecorrerDes(dgvGrilla);
                     ArbolBinario.RecorrerDes(lstCodigo);
                     ArbolBinario.RecorrerDes(lstB);
+                    ArbolBinario.RecorrerDes(tvArbolBinario);
                 }
             }
             if (optPreOrden.Checked)
@@ -46,12 +48,14 @@ namespace pryEstructuraDeDatos
                 ArbolBinario.RecorrerPreOrden(dgvGrilla);
                 ArbolBinario.RecorrerPreOrden(lstCodigo);
                 ArbolBinario.RecorrerPreOrden(lstB);
+                ArbolBinario.RecorrerPreOrden(tvArbolBinario);
             }
             if (optPostOrden.Checked)
             {
                 ArbolBinario.RecorrerPostOrden(dgvGrilla);
                 ArbolBinario.RecorrerPostOrden(lstCodigo);
                 ArbolBinario.RecorrerPostOrden(lstB);
+                ArbolBinario.RecorrerPostOrden(tvArbolBinario);
             }
 
             txtCodigo.Text = "";

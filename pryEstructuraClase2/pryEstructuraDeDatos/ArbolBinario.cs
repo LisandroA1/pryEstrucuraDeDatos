@@ -96,6 +96,19 @@ namespace pryEstructuraDeDatos
             InOrdenAsc(Grilla, Raiz);
         }
 
+        public void InOrdenAsc(TreeView treeview, Nodo R )
+        {
+            if (R.Izquierdo != null) InOrdenAsc(treeview, R.Izquierdo);
+            treeview.Nodes.Add(R.Codigo.ToString());
+            if (R.Derecho != null) InOrdenAsc(treeview, R.Derecho);
+        }
+
+        public void Recorrer(TreeView treeView)
+        {
+            treeView.Nodes.Clear();
+            InOrdenAsc(treeView, Raiz);
+        }
+
         //PROCEDIMIENTOS RECORRER INORDEN DESCENDENTE
 
         public void InOrdenDes(ListBox Lista, Nodo R) //POR LISTA
@@ -137,6 +150,21 @@ namespace pryEstructuraDeDatos
             InOrdenDes(Grilla, Raiz);
         }
 
+        public void InOrdenDes(TreeView treeview, Nodo R)
+        {
+            if (R.Derecho != null) InOrdenAsc(treeview, R.Derecho);
+            treeview.Nodes.Add(R.Codigo.ToString());
+            if (R.Izquierdo != null) InOrdenAsc(treeview, R.Izquierdo);
+        }
+
+        public void RecorrerDes(TreeView treeView)
+        {
+            treeView.Nodes.Clear();
+            InOrdenDes(treeView, Raiz);
+        }
+
+        
+
         //PROCEDIMIENTOS RECORRER PREORDEN
 
         public void PreOrden(ListBox Lista, Nodo R) //POR LISTA
@@ -176,6 +204,21 @@ namespace pryEstructuraDeDatos
             Grilla.Rows.Clear();
             PreOrden(Grilla, Raiz);
         }
+
+        public void PreOrden(TreeView treeView, Nodo R)
+        {
+            treeView.Nodes.Add(R.Codigo.ToString());
+            if (R.Izquierdo != null) InOrdenAsc(treeView, R.Izquierdo);
+            if (R.Derecho != null) InOrdenAsc(treeView, R.Derecho);
+        }
+
+        public void RecorrerPreOrden(TreeView treeView)
+        {
+            treeView.Nodes.Clear();
+            PreOrden(treeView, Raiz);
+        }
+
+        
 
         //PROCEDIMIENTOS RECORRER POSTORDEN
 
@@ -218,7 +261,57 @@ namespace pryEstructuraDeDatos
             PostOrden(Grilla, Raiz);
         }
 
+        public void PostOrden(TreeView treeView, Nodo R)
+        {
+            if (R.Izquierdo != null) InOrdenAsc(treeView, R.Izquierdo);
+            if (R.Derecho != null) InOrdenAsc(treeView, R.Derecho);
+            treeView.Nodes.Add(R.Codigo.ToString());
+        }
 
+        public void RecorrerPostOrden(TreeView treeView)
+        {
+            treeView.Nodes.Clear();
+            PostOrden(treeView, Raiz);
+        }
+
+        
+
+        //METODO EQUILIBRAR
+        private Nodo[] Vector = new Nodo[100];
+        private Int32 i = 0;
+
+        public void Equilibrar()
+        {
+            i = 0;
+            CargarVectorInOrden(Raiz);
+            Raiz = null;
+            EquilibrarArbol(0, i - 1);
+        }
+
+        private void CargarVectorInOrden(Nodo NodoPadre)
+        {
+            if (NodoPadre.Izquierdo != null)
+            {
+                CargarVectorInOrden(NodoPadre.Izquierdo);
+            }
+            Vector[i] = NodoPadre;
+            i = i++;
+            if (NodoPadre.Derecho != null)
+            {
+                CargarVectorInOrden(NodoPadre.Derecho);
+            }
+        }
+
+        private void EquilibrarArbol(Int32 ini, Int32 fin)
+        {
+            Int32 m = (ini + fin) / 2;
+            if (ini <= fin)
+            {
+                Agregar(Vector[m]);
+                EquilibrarArbol(ini, m - 1);
+                EquilibrarArbol(m + 1, fin);
+            }
+        }
 
     }
 }
