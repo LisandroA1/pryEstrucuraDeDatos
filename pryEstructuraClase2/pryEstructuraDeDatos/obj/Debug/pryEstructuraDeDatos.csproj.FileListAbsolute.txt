@@ -113,3 +113,4 @@ C:\Users\Terminal\Source\Repos\pryEstrucuraDeDatos\pryEstructuraClase2\pryEstruc
 C:\Users\Terminal\Source\Repos\pryEstrucuraDeDatos\pryEstructuraClase2\pryEstructuraDeDatos\obj\Debug\pryEstructuraDeDatos.csproj.CoreCompileInputs.cache
 C:\Users\Terminal\Source\Repos\pryEstrucuraDeDatos\pryEstructuraClase2\pryEstructuraDeDatos\obj\Debug\pryEstructuraDeDatos.exe
 C:\Users\Terminal\Source\Repos\pryEstrucuraDeDatos\pryEstructuraClase2\pryEstructuraDeDatos\obj\Debug\pryEstructuraDeDatos.pdb
+C:\Users\Alumno\Source\Repos\pryEstrucuraDeDatos\pryEstructuraClase2\pryEstructuraDeDatos\obj\Debug\pryEstructuraDeDatos.frmArbolBinario.resources
