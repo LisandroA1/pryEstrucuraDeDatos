@@ -89,11 +89,13 @@ namespace pryEstructuraDeDatos
             // 
             // txtTramite
             // 
+            this.txtTramite.Enabled = false;
             this.txtTramite.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTramite.Location = new System.Drawing.Point(70, 129);
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(139, 23);
             this.txtTramite.TabIndex = 6;
+            this.txtTramite.TextChanged += new System.EventHandler(this.txtTramite_TextChanged);
             // 
             // txtNombre
             // 
@@ -102,6 +104,7 @@ namespace pryEstructuraDeDatos
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(139, 23);
             this.txtNombre.TabIndex = 5;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtCodigo
             // 

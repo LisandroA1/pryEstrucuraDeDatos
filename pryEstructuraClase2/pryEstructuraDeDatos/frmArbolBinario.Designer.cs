@@ -33,6 +33,7 @@
             this.optDescendente = new System.Windows.Forms.RadioButton();
             this.optAscendente = new System.Windows.Forms.RadioButton();
             this.mrcListado = new System.Windows.Forms.GroupBox();
+            this.tvArbolBinario = new System.Windows.Forms.TreeView();
             this.lstB = new System.Windows.Forms.ListBox();
             this.dgvGrilla = new System.Windows.Forms.DataGridView();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,7 +56,6 @@
             this.optPostOrden = new System.Windows.Forms.RadioButton();
             this.optPreOrden = new System.Windows.Forms.RadioButton();
             this.optInOrden = new System.Windows.Forms.RadioButton();
-            this.tvArbolBinario = new System.Windows.Forms.TreeView();
             this.groupBox1.SuspendLayout();
             this.mrcListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
@@ -111,6 +111,13 @@
             this.mrcListado.TabIndex = 20;
             this.mrcListado.TabStop = false;
             this.mrcListado.Text = "Listado en una Lista y una Grilla";
+            // 
+            // tvArbolBinario
+            // 
+            this.tvArbolBinario.Location = new System.Drawing.Point(529, 16);
+            this.tvArbolBinario.Name = "tvArbolBinario";
+            this.tvArbolBinario.Size = new System.Drawing.Size(138, 215);
+            this.tvArbolBinario.TabIndex = 3;
             // 
             // lstB
             // 
@@ -210,6 +217,7 @@
             // 
             // cmdAgregar
             // 
+            this.cmdAgregar.Enabled = false;
             this.cmdAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdAgregar.Location = new System.Drawing.Point(9, 176);
             this.cmdAgregar.Name = "cmdAgregar";
@@ -226,6 +234,7 @@
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(139, 23);
             this.txtTramite.TabIndex = 6;
+            this.txtTramite.TextChanged += new System.EventHandler(this.txtTramite_TextChanged);
             // 
             // txtNombre
             // 
@@ -234,6 +243,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(139, 23);
             this.txtNombre.TabIndex = 5;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtCodigo
             // 
@@ -333,13 +343,6 @@
             this.optInOrden.Text = "InOrden";
             this.optInOrden.UseVisualStyleBackColor = true;
             this.optInOrden.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // tvArbolBinario
-            // 
-            this.tvArbolBinario.Location = new System.Drawing.Point(529, 16);
-            this.tvArbolBinario.Name = "tvArbolBinario";
-            this.tvArbolBinario.Size = new System.Drawing.Size(138, 215);
-            this.tvArbolBinario.TabIndex = 3;
             // 
             // frmArbolBinario
             // 

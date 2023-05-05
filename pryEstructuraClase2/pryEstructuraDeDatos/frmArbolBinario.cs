@@ -81,5 +81,27 @@ namespace pryEstructuraDeDatos
         {
             
         }
+
+        private void Validaciones()
+        {
+            if (txtCodigo.Text != string.Empty && txtNombre.Text != string.Empty && txtTramite.Text != string.Empty)
+            {
+                cmdAgregar.Enabled = true;
+            }
+            else
+            {
+                cmdAgregar.Enabled = false;
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            Validaciones();
+        }
+
+        private void txtTramite_TextChanged(object sender, EventArgs e)
+        {
+            Validaciones();
+        }
     }
 }
