@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,7 @@ namespace pryEstructuraDeDatos
             objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
             objNodo.Nombre = txtNombre.Text;
             objNodo.Tramite = txtTramite.Text;
+            StreamWriter Sw = new StreamWriter("./Hola.csv", false);
 
             ArbolBinario.Agregar(objNodo);
 
