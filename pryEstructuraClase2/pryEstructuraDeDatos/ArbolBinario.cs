@@ -338,9 +338,10 @@ namespace pryEstructuraDeDatos
 
 
 
-        //METODO EQUILIBRAR
+        //METODO ELIMINAR
         private Nodo[] Vector = new Nodo[100];
         private Int32 i = 0;
+        private int EliminoNodos;
 
         public void Equilibrar()
         {
@@ -348,6 +349,16 @@ namespace pryEstructuraDeDatos
             CargarVectorInOrden(Raiz);
             Raiz = null;
             EquilibrarArbol(0, i - 1);
+        }
+
+        public void Equilibrar(int Nodo)
+        {
+            EliminoNodos = Nodo;
+            i = 0;
+            CargarVectorInOrden(Raiz);
+            Raiz = null;
+            EquilibrarArbol(0, i - 1);
+
         }
 
         private void CargarVectorInOrden(Nodo NodoPadre)
@@ -415,31 +426,6 @@ namespace pryEstructuraDeDatos
         public void Eliminar(Int32 Codigo)
         {
             Raiz = EliminarNodos(Raiz, Codigo);
-        }
-
-        //METODO BUSCAR
-        public Nodo BusquedaRecursiva(Nodo actual, Int32 CodigoBusqueda)
-        {
-            if (actual == null) //si null el nodo no esta en el arbol
-            {
-                return null;
-            }
-            else if (actual.Codigo == CodigoBusqueda)
-            {
-                return actual;
-            }
-            else if (CodigoBusqueda < actual.Codigo)
-            {
-                return BusquedaRecursiva(actual.Izquierdo, CodigoBusqueda);
-            }
-            else
-            {
-                return BusquedaRecursiva(actual.Derecho, CodigoBusqueda);
-            }
-        }
-        public Nodo Buscar(int CodigoBusqueda)
-        {
-            return BusquedaRecursiva(Raiz, CodigoBusqueda);
         }
 
         //Recorrer

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmArbolBinario));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.mrcListarDatos = new System.Windows.Forms.GroupBox();
             this.optDescendente = new System.Windows.Forms.RadioButton();
             this.optAscendente = new System.Windows.Forms.RadioButton();
             this.mrcListado = new System.Windows.Forms.GroupBox();
@@ -56,7 +56,7 @@
             this.optPostOrden = new System.Windows.Forms.RadioButton();
             this.optPreOrden = new System.Windows.Forms.RadioButton();
             this.optInOrden = new System.Windows.Forms.RadioButton();
-            this.groupBox1.SuspendLayout();
+            this.mrcListarDatos.SuspendLayout();
             this.mrcListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.mrcElementoEliminado.SuspendLayout();
@@ -65,16 +65,16 @@
             this.mrcTipoDeOrden.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // mrcListarDatos
             // 
-            this.groupBox1.Controls.Add(this.optDescendente);
-            this.groupBox1.Controls.Add(this.optAscendente);
-            this.groupBox1.Location = new System.Drawing.Point(12, 247);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(209, 97);
-            this.groupBox1.TabIndex = 21;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Listar Datos";
+            this.mrcListarDatos.Controls.Add(this.optDescendente);
+            this.mrcListarDatos.Controls.Add(this.optAscendente);
+            this.mrcListarDatos.Location = new System.Drawing.Point(12, 247);
+            this.mrcListarDatos.Name = "mrcListarDatos";
+            this.mrcListarDatos.Size = new System.Drawing.Size(209, 97);
+            this.mrcListarDatos.TabIndex = 21;
+            this.mrcListarDatos.TabStop = false;
+            this.mrcListarDatos.Text = "Listar Datos";
             // 
             // optDescendente
             // 
@@ -99,6 +99,7 @@
             this.optAscendente.TabStop = true;
             this.optAscendente.Text = "Ascendente";
             this.optAscendente.UseVisualStyleBackColor = true;
+            this.optAscendente.CheckedChanged += new System.EventHandler(this.optAscendente_CheckedChanged);
             // 
             // mrcListado
             // 
@@ -178,6 +179,7 @@
             this.lstCodigo.Name = "lstCodigo";
             this.lstCodigo.Size = new System.Drawing.Size(141, 24);
             this.lstCodigo.TabIndex = 9;
+            this.lstCodigo.SelectedIndexChanged += new System.EventHandler(this.lstCodigo_SelectedIndexChanged);
             // 
             // cmdEliminar
             // 
@@ -188,6 +190,7 @@
             this.cmdEliminar.TabIndex = 8;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.UseVisualStyleBackColor = true;
+            this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
             // 
             // label4
             // 
@@ -350,7 +353,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(699, 642);
             this.Controls.Add(this.mrcTipoDeOrden);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.mrcListarDatos);
             this.Controls.Add(this.mrcListado);
             this.Controls.Add(this.img);
             this.Controls.Add(this.mrcElementoEliminado);
@@ -359,8 +362,9 @@
             this.Name = "frmArbolBinario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Load += new System.EventHandler(this.frmArbolBinario_Load);
+            this.mrcListarDatos.ResumeLayout(false);
+            this.mrcListarDatos.PerformLayout();
             this.mrcListado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
             this.mrcElementoEliminado.ResumeLayout(false);
@@ -376,7 +380,7 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox mrcListarDatos;
         private System.Windows.Forms.RadioButton optDescendente;
         private System.Windows.Forms.RadioButton optAscendente;
         private System.Windows.Forms.GroupBox mrcListado;
