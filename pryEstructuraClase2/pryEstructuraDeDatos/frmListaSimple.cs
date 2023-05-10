@@ -39,6 +39,7 @@ namespace pryEstructuraDeDatos
             if (ListaDePersonas.Primero != null)
             {
 
+
                 Codigo = Convert.ToInt32(lstCodigo.Text);
                 ListaDePersonas.Eliminar(Codigo);
                 ListaDePersonas.Recorrer(dgvGrilla);

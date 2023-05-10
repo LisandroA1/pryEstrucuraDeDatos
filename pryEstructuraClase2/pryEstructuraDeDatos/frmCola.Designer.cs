@@ -78,6 +78,7 @@ namespace pryEstructuraDeDatos
             // 
             // cmdAgregar
             // 
+            this.cmdAgregar.Enabled = false;
             this.cmdAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdAgregar.Location = new System.Drawing.Point(9, 176);
             this.cmdAgregar.Name = "cmdAgregar";
@@ -89,7 +90,6 @@ namespace pryEstructuraDeDatos
             // 
             // txtTramite
             // 
-            this.txtTramite.Enabled = false;
             this.txtTramite.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTramite.Location = new System.Drawing.Point(70, 129);
             this.txtTramite.Name = "txtTramite";
