@@ -38,6 +38,9 @@ namespace pryEstructuraDeDatos
                     ArbolBinario.Recorrer(lstCodigo);
                     ArbolBinario.Recorrer(lstB);
                     ArbolBinario.Recorrer(tvArbolBinario);
+                    ArbolBinario.RecorrerSW(Sw);
+
+
                 }
                 else
                 {
@@ -45,6 +48,8 @@ namespace pryEstructuraDeDatos
                     ArbolBinario.RecorrerDes(lstCodigo);
                     ArbolBinario.RecorrerDes(lstB);
                     ArbolBinario.RecorrerDes(tvArbolBinario);
+                    ArbolBinario.RecorrerDesSW(Sw);
+
                 }
             }
             if (optPreOrden.Checked)
@@ -53,6 +58,7 @@ namespace pryEstructuraDeDatos
                 ArbolBinario.RecorrerPreOrden(lstCodigo);
                 ArbolBinario.RecorrerPreOrden(lstB);
                 ArbolBinario.RecorrerPreOrden(tvArbolBinario);
+                ArbolBinario.RecorrerPreOrdenSW(Sw);
             }
             if (optPostOrden.Checked)
             {
@@ -60,6 +66,7 @@ namespace pryEstructuraDeDatos
                 ArbolBinario.RecorrerPostOrden(lstCodigo);
                 ArbolBinario.RecorrerPostOrden(lstB);
                 ArbolBinario.RecorrerPostOrden(tvArbolBinario);
+                ArbolBinario.RecorrerPostOrdenSW(Sw);
             }
 
             txtCodigo.Text = "";
@@ -156,7 +163,7 @@ namespace pryEstructuraDeDatos
         {
             if (ArbolBinario.Raiz != null)
             {
-                StreamWriter sw = new StreamWriter("./hola.txt", false);
+                StreamWriter sw = new StreamWriter("./hola.csv", false);
                 ArbolBinario.Recorrer(sw, asc, recorrer);
                 sw.Close();
                 sw.Dispose();
