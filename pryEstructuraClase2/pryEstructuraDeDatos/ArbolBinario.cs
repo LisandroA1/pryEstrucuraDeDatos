@@ -97,17 +97,18 @@ namespace pryEstructuraDeDatos
             InOrdenAsc(Grilla, Raiz);
         }
 
-        public void InOrdenAsc(TreeView treeview, Nodo R) //POR TRIEVIEW
+        public void InOrdenAsc(TreeNodeCollection nodoPadre, Nodo Raiz)
         {
-            if (R.Izquierdo != null) InOrdenAsc(treeview, R.Izquierdo);
-            treeview.Nodes.Add(R.Codigo.ToString());
-            if (R.Derecho != null) InOrdenAsc(treeview, R.Derecho);
+            TreeNode nodonuevo = nodoPadre.Add(Raiz.Codigo.ToString());
+            if (Raiz.Izquierdo != null) InOrdenAsc(nodonuevo.Nodes, Raiz.Izquierdo);
+
+            if (Raiz.Derecho != null) InOrdenAsc(nodonuevo.Nodes, Raiz.Derecho);
         }
 
         public void Recorrer(TreeView treeView)
         {
             treeView.Nodes.Clear();
-            InOrdenAsc(treeView, Raiz);
+            InOrdenAsc(treeView.Nodes, Raiz);
         }
 
         public void RecorrerSW(StreamWriter sw) //CREAR ARCHIVO
@@ -166,17 +167,17 @@ namespace pryEstructuraDeDatos
             InOrdenDes(Grilla, Raiz);
         }
 
-        public void InOrdenDes(TreeView treeview, Nodo R) //POR TREEVIEW
+        public void InOrdenDes(TreeNodeCollection NodoPadre, Nodo R)
         {
-            if (R.Derecho != null) InOrdenAsc(treeview, R.Derecho);
-            treeview.Nodes.Add(R.Codigo.ToString());
-            if (R.Izquierdo != null) InOrdenAsc(treeview, R.Izquierdo);
+            if (R.Derecho != null) InOrdenAsc(NodoPadre, R.Derecho);
+            TreeNode nodoNuevo = NodoPadre.Add(R.Codigo.ToString());
+            if (R.Izquierdo != null) InOrdenAsc(NodoPadre, R.Izquierdo);
         }
 
         public void RecorrerDes(TreeView treeView)
         {
             treeView.Nodes.Clear();
-            InOrdenDes(treeView, Raiz);
+            InOrdenDes(treeView.Nodes, Raiz);
         }
 
         public void RecorrerDesSW(StreamWriter sw) //CREAR ARCHIVO
@@ -237,17 +238,17 @@ namespace pryEstructuraDeDatos
             PreOrden(Grilla, Raiz);
         }
 
-        public void PreOrden(TreeView treeView, Nodo R)
+        public void PreOrden(TreeNodeCollection Npadre, Nodo R)
         {
-            treeView.Nodes.Add(R.Codigo.ToString());
-            if (R.Izquierdo != null) InOrdenAsc(treeView, R.Izquierdo);
-            if (R.Derecho != null) InOrdenAsc(treeView, R.Derecho);
+            TreeNode nodoNuevo = Npadre.Add(R.Codigo.ToString());
+            if (R.Izquierdo != null) InOrdenAsc(nodoNuevo.Nodes, R.Izquierdo);
+            if (R.Derecho != null) InOrdenAsc(nodoNuevo.Nodes, R.Derecho);
         }
 
         public void RecorrerPreOrden(TreeView treeView)
         {
             treeView.Nodes.Clear();
-            PreOrden(treeView, Raiz);
+            PreOrden(treeView.Nodes, Raiz);
         }
 
         public void RecorrerPreOrdenSW(StreamWriter sw) //CREAR ARCHIVO
@@ -308,17 +309,18 @@ namespace pryEstructuraDeDatos
             PostOrden(Grilla, Raiz);
         }
 
-        public void PostOrden(TreeView treeView, Nodo R) //POR TREEVIEW
+        public void PostOrden(TreeNodeCollection Npadre, Nodo R)
         {
-            if (R.Izquierdo != null) InOrdenAsc(treeView, R.Izquierdo);
-            if (R.Derecho != null) InOrdenAsc(treeView, R.Derecho);
-            treeView.Nodes.Add(R.Codigo.ToString());
+            TreeNode nodoNuevo = Npadre.Add(R.Codigo.ToString());
+            if (R.Izquierdo != null) InOrdenAsc(nodoNuevo.Nodes, R.Izquierdo);
+            if (R.Derecho != null) InOrdenAsc(nodoNuevo.Nodes, R.Derecho);
+
         }
 
         public void RecorrerPostOrden(TreeView treeView)
         {
             treeView.Nodes.Clear();
-            PostOrden(treeView, Raiz);
+            PostOrden(treeView.Nodes, Raiz);
         }
 
         public void RecorrerPostOrdenSW(StreamWriter sw)
