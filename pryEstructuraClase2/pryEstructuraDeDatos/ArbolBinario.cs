@@ -407,7 +407,7 @@ namespace pryEstructuraDeDatos
             {
                 if (NodoActual.Izquierdo == null)
                 {
-                   return NodoActual.Derecho;
+                    return NodoActual.Derecho;
                 }
                 else if (NodoActual.Derecho == null)
                 {
@@ -520,6 +520,30 @@ namespace pryEstructuraDeDatos
             else if (recorrer == "PreOrden")
             {
                 PreOrden(Grilla, Raiz);
+            }
+        }
+
+        public bool Busqueda(Int32 Codigo)
+        {
+            Nodo auxiliar = Raiz;
+            while (auxiliar != null && auxiliar.Codigo != Codigo)
+            {
+                if (Codigo < auxiliar.Codigo)
+                {
+                    auxiliar = auxiliar.Izquierdo;
+                }
+                else
+                {
+                    auxiliar = auxiliar.Derecho;
+                }
+            }
+            if (auxiliar != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }

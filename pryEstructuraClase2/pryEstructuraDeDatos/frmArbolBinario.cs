@@ -22,58 +22,69 @@ namespace pryEstructuraDeDatos
         public string recorrer;
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
-            Nodo objNodo = new Nodo();
-            objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
-            objNodo.Nombre = txtNombre.Text;
-            objNodo.Tramite = txtTramite.Text;
-            StreamWriter Sw = new StreamWriter("./Hola.csv", false);
 
-            ArbolBinario.Agregar(objNodo);
 
-            if (optInOrden.Checked)
+            if (ArbolBinario.Busqueda(Convert.ToInt32(txtCodigo.Text)) == false)
             {
-                if (optAscendente.Checked)
+                Nodo objNodo = new Nodo();
+                objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
+                objNodo.Nombre = txtNombre.Text;
+                objNodo.Tramite = txtTramite.Text;
+                StreamWriter Sw = new StreamWriter("./Hola.csv", false);
+
+                ArbolBinario.Agregar(objNodo);
+
+                if (optInOrden.Checked)
                 {
-                    ArbolBinario.Recorrer(dgvGrilla);
-                    ArbolBinario.Recorrer(lstCodigo);
-                    ArbolBinario.Recorrer(lstB);
-                    ArbolBinario.Recorrer(tvArbolBinario);
-                    ArbolBinario.RecorrerSW(Sw);
+                    if (optAscendente.Checked)
+                    {
+                        ArbolBinario.Recorrer(dgvGrilla);
+                        ArbolBinario.Recorrer(lstCodigo);
+                        ArbolBinario.Recorrer(lstB);
+                        ArbolBinario.Recorrer(tvArbolBinario);
+                        ArbolBinario.RecorrerSW(Sw);
 
 
+                    }
+                    else
+                    {
+                        ArbolBinario.RecorrerDes(dgvGrilla);
+                        ArbolBinario.RecorrerDes(lstCodigo);
+                        ArbolBinario.RecorrerDes(lstB);
+                        ArbolBinario.RecorrerDes(tvArbolBinario);
+                        ArbolBinario.RecorrerDesSW(Sw);
+
+                    }
                 }
-                else
+                if (optPreOrden.Checked)
                 {
-                    ArbolBinario.RecorrerDes(dgvGrilla);
-                    ArbolBinario.RecorrerDes(lstCodigo);
-                    ArbolBinario.RecorrerDes(lstB);
-                    ArbolBinario.RecorrerDes(tvArbolBinario);
-                    ArbolBinario.RecorrerDesSW(Sw);
-
+                    ArbolBinario.RecorrerPreOrden(dgvGrilla);
+                    ArbolBinario.RecorrerPreOrden(lstCodigo);
+                    ArbolBinario.RecorrerPreOrden(lstB);
+                    ArbolBinario.RecorrerPreOrden(tvArbolBinario);
+                    ArbolBinario.RecorrerPreOrdenSW(Sw);
                 }
+                if (optPostOrden.Checked)
+                {
+                    ArbolBinario.RecorrerPostOrden(dgvGrilla);
+                    ArbolBinario.RecorrerPostOrden(lstCodigo);
+                    ArbolBinario.RecorrerPostOrden(lstB);
+                    ArbolBinario.RecorrerPostOrden(tvArbolBinario);
+                    ArbolBinario.RecorrerPostOrdenSW(Sw);
+                }
+                txtCodigo.Text = "";
+                txtNombre.Text = "";
+                txtTramite.Text = "";
+                Sw.Close();
+                Sw.Dispose();
+                
             }
-            if (optPreOrden.Checked)
+            else
             {
-                ArbolBinario.RecorrerPreOrden(dgvGrilla);
-                ArbolBinario.RecorrerPreOrden(lstCodigo);
-                ArbolBinario.RecorrerPreOrden(lstB);
-                ArbolBinario.RecorrerPreOrden(tvArbolBinario);
-                ArbolBinario.RecorrerPreOrdenSW(Sw);
-            }
-            if (optPostOrden.Checked)
-            {
-                ArbolBinario.RecorrerPostOrden(dgvGrilla);
-                ArbolBinario.RecorrerPostOrden(lstCodigo);
-                ArbolBinario.RecorrerPostOrden(lstB);
-                ArbolBinario.RecorrerPostOrden(tvArbolBinario);
-                ArbolBinario.RecorrerPostOrdenSW(Sw);
+                MessageBox.Show("El codigo se repite, no se pudo cargar");
             }
 
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";
-            Sw.Close();
-            Sw.Dispose();
+            
 
 
         }
@@ -238,5 +249,7 @@ namespace pryEstructuraDeDatos
                 cmdEliminar.Enabled = true;
             }
         }
+
+
     }
 }

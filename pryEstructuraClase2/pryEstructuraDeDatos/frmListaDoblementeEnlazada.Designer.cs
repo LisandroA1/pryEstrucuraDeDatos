@@ -130,6 +130,7 @@ namespace pryEstructuraDeDatos
             this.lstCodigo.Name = "lstCodigo";
             this.lstCodigo.Size = new System.Drawing.Size(141, 24);
             this.lstCodigo.TabIndex = 9;
+            this.lstCodigo.SelectedIndexChanged += new System.EventHandler(this.lstCodigo_SelectedIndexChanged);
             // 
             // cmdEliminar
             // 

@@ -94,5 +94,20 @@ namespace pryEstructuraDeDatos
         {
             Validaciones();
         }
+
+        private void lstCodigo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //if (lstCodigo.SelectedIndex != -1)
+            //{
+            //    cmdEliminar.Enabled = true;
+            //}
+            //if (lstCodigo.SelectedIndex == -1)
+            //{
+            //    cmdEliminar.Enabled = false;
+            //}
+            
+                
+            
+        }
     }
 }
