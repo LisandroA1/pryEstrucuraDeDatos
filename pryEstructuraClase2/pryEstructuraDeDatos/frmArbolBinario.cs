@@ -250,6 +250,16 @@ namespace pryEstructuraDeDatos
             }
         }
 
-
+        private void cmdEquilibrar_Click(object sender, EventArgs e)
+        {
+            if (ArbolBinario.Raiz != null)
+            {
+                ArbolBinario.Equilibrar();
+                ArbolBinario.Recorrer(dgvGrilla);
+                ArbolBinario.Recorrer(lstB);
+                ArbolBinario.Recorrer(lstCodigo);
+                ArbolBinario.Recorrer(tvArbolBinario);
+            }
+        }
     }
 }

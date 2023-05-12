@@ -56,6 +56,7 @@
             this.optPostOrden = new System.Windows.Forms.RadioButton();
             this.optPreOrden = new System.Windows.Forms.RadioButton();
             this.optInOrden = new System.Windows.Forms.RadioButton();
+            this.cmdEquilibrar = new System.Windows.Forms.Button();
             this.mrcListarDatos.SuspendLayout();
             this.mrcListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
@@ -204,6 +205,7 @@
             // 
             // mrcNuevoElemento
             // 
+            this.mrcNuevoElemento.Controls.Add(this.cmdEquilibrar);
             this.mrcNuevoElemento.Controls.Add(this.cmdAgregar);
             this.mrcNuevoElemento.Controls.Add(this.txtTramite);
             this.mrcNuevoElemento.Controls.Add(this.txtNombre);
@@ -222,9 +224,9 @@
             // 
             this.cmdAgregar.Enabled = false;
             this.cmdAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdAgregar.Location = new System.Drawing.Point(9, 176);
+            this.cmdAgregar.Location = new System.Drawing.Point(109, 176);
             this.cmdAgregar.Name = "cmdAgregar";
-            this.cmdAgregar.Size = new System.Drawing.Size(200, 37);
+            this.cmdAgregar.Size = new System.Drawing.Size(100, 37);
             this.cmdAgregar.TabIndex = 7;
             this.cmdAgregar.Text = "Agregar";
             this.cmdAgregar.UseVisualStyleBackColor = true;
@@ -347,6 +349,18 @@
             this.optInOrden.UseVisualStyleBackColor = true;
             this.optInOrden.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
+            // cmdEquilibrar
+            // 
+            this.cmdEquilibrar.Enabled = false;
+            this.cmdEquilibrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdEquilibrar.Location = new System.Drawing.Point(3, 176);
+            this.cmdEquilibrar.Name = "cmdEquilibrar";
+            this.cmdEquilibrar.Size = new System.Drawing.Size(100, 37);
+            this.cmdEquilibrar.TabIndex = 8;
+            this.cmdEquilibrar.Text = "Equilibrar";
+            this.cmdEquilibrar.UseVisualStyleBackColor = true;
+            this.cmdEquilibrar.Click += new System.EventHandler(this.cmdEquilibrar_Click);
+            // 
             // frmArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -407,5 +421,6 @@
         private System.Windows.Forms.RadioButton optPreOrden;
         private System.Windows.Forms.RadioButton optInOrden;
         private System.Windows.Forms.TreeView tvArbolBinario;
+        private System.Windows.Forms.Button cmdEquilibrar;
     }
 }
