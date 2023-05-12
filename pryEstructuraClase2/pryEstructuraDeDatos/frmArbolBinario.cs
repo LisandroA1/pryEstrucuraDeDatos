@@ -30,7 +30,7 @@ namespace pryEstructuraDeDatos
                 objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
                 objNodo.Nombre = txtNombre.Text;
                 objNodo.Tramite = txtTramite.Text;
-                StreamWriter Sw = new StreamWriter("./Hola.csv", false);
+                StreamWriter Sw = new StreamWriter("./ArbolBinario.csv", false);
 
                 ArbolBinario.Agregar(objNodo);
 
@@ -104,7 +104,7 @@ namespace pryEstructuraDeDatos
                     lstCodigo.Items.Clear();
                     lstB.Items.Clear();
                     tvArbolBinario.Nodes.Clear();
-                    File.Delete("./Hola.csv");
+                    File.Delete("./ArbolBinario.csv");
                 }
 
             }
@@ -174,7 +174,7 @@ namespace pryEstructuraDeDatos
         {
             if (ArbolBinario.Raiz != null)
             {
-                StreamWriter sw = new StreamWriter("./hola.csv", false);
+                StreamWriter sw = new StreamWriter("./ArbolBinario.csv", false);
                 ArbolBinario.Recorrer(sw, asc, recorrer);
                 sw.Close();
                 sw.Dispose();
