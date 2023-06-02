@@ -50,12 +50,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArbolBinario.cs" />
+    <Compile Include="clsBaseDeDatos.cs" />
     <Compile Include="Cola.cs" />
     <Compile Include="frmArbolBinario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmArbolBinario.Designer.cs">
       <DependentUpon>frmArbolBinario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaseDeDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseDeDatos.Designer.cs">
+      <DependentUpon>frmBaseDeDatos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDatosProgramador.cs">
       <SubType>Form</SubType>
@@ -101,6 +108,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmArbolBinario.resx">
       <DependentUpon>frmArbolBinario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaseDeDatos.resx">
+      <DependentUpon>frmBaseDeDatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDatosProgramador.resx">
       <DependentUpon>frmDatosProgramador.cs</DependentUpon>
