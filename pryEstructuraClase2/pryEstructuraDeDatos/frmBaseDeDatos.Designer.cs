@@ -109,6 +109,7 @@
             this.cmdSeleccionConvolucion.TabIndex = 2;
             this.cmdSeleccionConvolucion.Text = "Seleccion por convolucion";
             this.cmdSeleccionConvolucion.UseVisualStyleBackColor = true;
+            this.cmdSeleccionConvolucion.Click += new System.EventHandler(this.cmdSeleccionConvolucion_Click);
             // 
             // cmdSeleccionMulti
             // 
@@ -150,6 +151,7 @@
             this.cmdJuntar.TabIndex = 2;
             this.cmdJuntar.Text = "Juntar";
             this.cmdJuntar.UseVisualStyleBackColor = true;
+            this.cmdJuntar.Click += new System.EventHandler(this.cmdJuntar_Click);
             // 
             // cmdProyeccionMulti
             // 
@@ -190,7 +192,7 @@
             this.Controls.Add(this.dgv);
             this.Name = "frmBaseDeDatos";
             this.Text = "Base De Datos";
-           // this.Load += new System.EventHandler(this.frmBaseDeDatos_Load);
+            this.Load += new System.EventHandler(this.frmBaseDeDatos_Load);
             this.mrcOperacionesAlgebraicas.ResumeLayout(false);
             this.mrcOperacionesDeSeleccion.ResumeLayout(false);
             this.mrcOperacionesDeProyeccion.ResumeLayout(false);

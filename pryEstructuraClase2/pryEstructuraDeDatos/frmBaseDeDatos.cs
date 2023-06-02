@@ -60,9 +60,10 @@ namespace pryEstructuraDeDatos
         private void cmdInterseccion_Click_1(object sender, EventArgs e)
         {
             objBaseDatos = new clsBaseDeDatos();
-            String varSql = " Select * From libro " +
-                " where IdAutor = 5 and exists " +
-                " (Select * from libro where IdIdioma = 3) ";
+            String varSql = "Select * from libro " +
+                " where IdIdioma=3 and IdLibro  in " +
+                " (Select IdLibro from libro where IdPais =2 )" +
+                " order by 1 asc ";
             objBaseDatos.Listar(dgv, varSql);
         }
 
@@ -74,6 +75,25 @@ namespace pryEstructuraDeDatos
                 " (Select IdLibro from libro where IdPais =2 )" +
                 " order by 1 asc ";
             objBaseDatos.Listar(dgv, varSql);
+        }
+
+        private void cmdSeleccionConvolucion_Click(object sender, EventArgs e)
+        {
+            objBaseDatos = new clsBaseDeDatos();
+            String varSql = "SELECT * " + "FROM (select * from libro where idIdioma > 1) as X " + "WHERE IDPAIS = 2";
+            objBaseDatos.Listar(dgv, varSql);
+        }
+
+        private void cmdJuntar_Click(object sender, EventArgs e)
+        {
+            objBaseDatos = new clsBaseDeDatos();
+            String varSql = "SELECT TITULO, NOMBRE " + "FROM LIBRO INNER JOIN PAIS " + "ON LIBRO.IDPAIS = PAIS.IDPAIS";
+            objBaseDatos.Listar(dgv, varSql);
+        }
+
+        private void frmBaseDeDatos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -39,7 +39,7 @@ namespace pryEstructuraDeDatos
             catch (Exception e)
             {
 
-
+                conexion.Close();
             }
         }
 
@@ -66,6 +66,7 @@ namespace pryEstructuraDeDatos
             {
 
                 MessageBox.Show(e.Message);
+                conexion.Close();
             }
         }
     }
