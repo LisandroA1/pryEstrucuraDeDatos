@@ -64,6 +64,12 @@
     <Compile Include="frmBaseDeDatos.Designer.cs">
       <DependentUpon>frmBaseDeDatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultaEnLaBaseDeDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaEnLaBaseDeDatos.Designer.cs">
+      <DependentUpon>frmConsultaEnLaBaseDeDatos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDatosProgramador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBaseDeDatos.resx">
       <DependentUpon>frmBaseDeDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaEnLaBaseDeDatos.resx">
+      <DependentUpon>frmConsultaEnLaBaseDeDatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDatosProgramador.resx">
       <DependentUpon>frmDatosProgramador.cs</DependentUpon>

@@ -184,3 +184,4 @@ C:\Users\Terminal\Source\Repos\pryEstrucuraDeDatos9\pryEstructuraClase2\pryEstru
 C:\Users\Terminal\Source\Repos\pryEstrucuraDeDatos9\pryEstructuraClase2\pryEstructuraDeDatos\obj\Debug\pryEstructuraDeDatos.pdb
 C:\Users\Terminal\Source\Repos\pryEstrucuraDeDatos8\pryEstructuraClase2\pryEstructuraDeDatos\obj\Debug\pryEstructuraDeDatos.frmBaseDeDatos.resources
 C:\Users\Alumnos\Source\Repos\pryEstrucuraDeDatos\pryEstructuraClase2\pryEstructuraDeDatos\obj\Debug\pryEstructuraDeDatos.frmBaseDeDatos.resources
+C:\Users\Alumnos\Source\Repos\pryEstrucuraDeDatos\pryEstructuraClase2\pryEstructuraDeDatos\obj\Debug\pryEstructuraDeDatos.frmConsultaEnLaBaseDeDatos.resources
