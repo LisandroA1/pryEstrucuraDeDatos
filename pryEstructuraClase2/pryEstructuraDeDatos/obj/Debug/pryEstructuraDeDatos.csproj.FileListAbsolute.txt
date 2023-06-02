@@ -182,3 +182,4 @@ C:\Users\Terminal\Source\Repos\pryEstrucuraDeDatos9\pryEstructuraClase2\pryEstru
 C:\Users\Terminal\Source\Repos\pryEstrucuraDeDatos9\pryEstructuraClase2\pryEstructuraDeDatos\obj\Debug\pryEstructuraDeDatos.csproj.CoreCompileInputs.cache
 C:\Users\Terminal\Source\Repos\pryEstrucuraDeDatos9\pryEstructuraClase2\pryEstructuraDeDatos\obj\Debug\pryEstructuraDeDatos.exe
 C:\Users\Terminal\Source\Repos\pryEstrucuraDeDatos9\pryEstructuraClase2\pryEstructuraDeDatos\obj\Debug\pryEstructuraDeDatos.pdb
+C:\Users\Terminal\Source\Repos\pryEstrucuraDeDatos8\pryEstructuraClase2\pryEstructuraDeDatos\obj\Debug\pryEstructuraDeDatos.frmBaseDeDatos.resources

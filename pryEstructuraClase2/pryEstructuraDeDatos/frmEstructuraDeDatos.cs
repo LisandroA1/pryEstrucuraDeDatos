@@ -57,5 +57,11 @@ namespace pryEstructuraDeDatos
             frmArbolBinario newobj = new frmArbolBinario();
             newobj.ShowDialog();
         }
+
+        private void baseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaseDeDatos newobj = new frmBaseDeDatos();
+            newobj.ShowDialog();
+        }
     }
 }

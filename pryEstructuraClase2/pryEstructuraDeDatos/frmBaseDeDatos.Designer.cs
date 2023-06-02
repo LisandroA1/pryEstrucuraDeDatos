@@ -67,6 +67,7 @@
             this.cmdDiferencia.TabIndex = 2;
             this.cmdDiferencia.Text = "Diferencia";
             this.cmdDiferencia.UseVisualStyleBackColor = true;
+            this.cmdDiferencia.Click += new System.EventHandler(this.cmdDiferencia_Click_1);
             // 
             // cmdInterseccion
             // 
@@ -76,6 +77,7 @@
             this.cmdInterseccion.TabIndex = 1;
             this.cmdInterseccion.Text = "Interseccion";
             this.cmdInterseccion.UseVisualStyleBackColor = true;
+            this.cmdInterseccion.Click += new System.EventHandler(this.cmdInterseccion_Click_1);
             // 
             // cmdUnion
             // 
@@ -85,6 +87,7 @@
             this.cmdUnion.TabIndex = 0;
             this.cmdUnion.Text = "Union";
             this.cmdUnion.UseVisualStyleBackColor = true;
+            this.cmdUnion.Click += new System.EventHandler(this.cmdUnion_Click_1);
             // 
             // mrcOperacionesDeSeleccion
             // 
@@ -115,6 +118,7 @@
             this.cmdSeleccionMulti.TabIndex = 1;
             this.cmdSeleccionMulti.Text = "Seleccion Multiatributo";
             this.cmdSeleccionMulti.UseVisualStyleBackColor = true;
+            this.cmdSeleccionMulti.Click += new System.EventHandler(this.cmdSeleccionMulti_Click_1);
             // 
             // cmdSeleccionSimple
             // 
@@ -124,6 +128,7 @@
             this.cmdSeleccionSimple.TabIndex = 0;
             this.cmdSeleccionSimple.Text = "Seleccion Simple";
             this.cmdSeleccionSimple.UseVisualStyleBackColor = true;
+            this.cmdSeleccionSimple.Click += new System.EventHandler(this.cmdSeleccionSimple_Click_1);
             // 
             // mrcOperacionesDeProyeccion
             // 
@@ -154,6 +159,7 @@
             this.cmdProyeccionMulti.TabIndex = 1;
             this.cmdProyeccionMulti.Text = "Proyeccion Multiatributo";
             this.cmdProyeccionMulti.UseVisualStyleBackColor = true;
+            this.cmdProyeccionMulti.Click += new System.EventHandler(this.cmdProyeccionMulti_Click_1);
             // 
             // cmdProyeccionSimple
             // 
@@ -163,6 +169,7 @@
             this.cmdProyeccionSimple.TabIndex = 0;
             this.cmdProyeccionSimple.Text = "Proyeccion Simple";
             this.cmdProyeccionSimple.UseVisualStyleBackColor = true;
+            this.cmdProyeccionSimple.Click += new System.EventHandler(this.cmdProyeccionSimple_Click_1);
             // 
             // dgv
             // 
@@ -183,7 +190,7 @@
             this.Controls.Add(this.dgv);
             this.Name = "frmBaseDeDatos";
             this.Text = "Base De Datos";
-            this.Load += new System.EventHandler(this.frmBaseDeDatos_Load);
+           // this.Load += new System.EventHandler(this.frmBaseDeDatos_Load);
             this.mrcOperacionesAlgebraicas.ResumeLayout(false);
             this.mrcOperacionesDeSeleccion.ResumeLayout(false);
             this.mrcOperacionesDeProyeccion.ResumeLayout(false);
